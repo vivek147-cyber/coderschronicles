@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block desc %} 
+{{ block.super }}
+<meta name="description" content="We believe that hard work commitment and a proper guidance can help a student in achieving their dreams"/>
+{% endblock %}
+{% block title %}About Us{% endblock title %}
+
+{% block css %}
+{{ block.super }}
+<link href="{% static 'css/about.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section class="bg-dark dark-mode position-relative d-flex align-items-center min-vh-100 overflow-hidden"  style="background-image: url('{% static "images/about.jpg" %}');background-position: center;
+background-blend-mode: multiply;">
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold " style="color: #ffffff;">ABOUT US</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4" style="color:white; font-size:26px;">Unlock Your Potential - Building Futures, One at a time: Software Development and Corporate Training for your Advancement in Career</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-lg px-4 gap-3 rounded-pill" style="color: #ffffff;
+        border: 3px solid #ffffff;
+        box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);" >Software Development <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        <button type="button" class="btn  btn-lg px-4 rounded-pill" style="background: white;
+        color: #000000;
+        box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Corporate Training <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+      </div>
+    </div>
+  </div> 
+</section>
+  <br>
+  <br>
+  <h1>Pure Css responsive <span>timeline</span></h1>
+
+<div class="container lg">
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>First Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Seconed Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Third Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Fourth Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Fifth Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+</div>
+  
+
+<section class="py-0 py-xl-5 bg-dark dark-mode">
+	<div class="container" style="display: flex;
+    justify-content: center;">
+		<div class="row g-3">
+<div class=" profile-card">
+    <div class="img">
+        <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg">
+    </div>
+    <div class="caption">
+        <h3>Vin Diesel</h3>
+        <p>Senior App Developer</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+<div class="profile-card">
+    <div class="img">
+        <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg">
+    </div>
+    <div class="caption">
+        <h3>David Corner</h3>
+        <p>Front End Developer</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+<div class="profile-card">
+    <div class="img">
+        <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg">
+    </div>
+    <div class="caption">
+        <h3>Tom Cruise</h3>
+        <p>Full Stact Developer</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+<div class="profile-card">
+    <div class="img">
+        <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg">
+    </div>
+    <div class="caption">
+        <h3>Tom Cruise</h3>
+        <p>Full Stact Developer</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+
+{% endblock content %}

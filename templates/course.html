@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block desc %} 
+{{ block.super }}
+<meta name="description" content="We believe that hard work commitment and a proper guidance can help a student in achieving their dreams"/>
+{% endblock %}
+{% block title %}Courses{% endblock title %}
+
+{% block css %}
+{{ block.super }}
+<link href="{% static 'css/courses.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<center>
+  <section class=" position-relative d-flex align-items-center min-vh-100 overflow-hidden" >
+    <div class="px-4 py-5 my-5 text-center">
+      <h1 class="coderchronicles display-5 fw-bold text-body-emphasis">Corporate Training</h1>
+      <div class="col-lg-6 mx-auto">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <div class="card formcard bg-transparent" style="margin:47px; border:0px; " >
+            <img src="{% static 'images/course.png' %}" alt="course">
+        </div>
+        </div>
+      </div>
+    </div> 
+  </section>
+  </center> 
+
+
+
+<br>
+<br>
+
+<div class="container px-5">
+    <div class="row gx-5 mb-n10 z-1">
+      {% for i in tcourse %}
+        <div class="col-lg-4 mb-5">
+            <div class="card" style="width: 18rem; border:0px; box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);">
+                <img src="{{i.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                </div>
+                
+                <div class="card-body">
+                  <p>{{i.description}}</p>
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=7065522354&text=Hello Sir, I want to take this {{i.name}} course. Please send more details about the Course." class="btn"
+                   style="font-size: 13px;
+                   background: #090909;
+                   color: #ffffff;
+                   border: #000000;
+                   box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Get your Course Booked Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+        
+    </div>
+ 
+</div>
+
+<br>
+<br>
+<br>
+
+{% comment %} Popular course {% endcomment %}
+{% comment %} 
+<div class="container px-5">
+  <center><h2 class="wcu">Popular Course</h2>
+    <hr style="width:11%;background: black;
+height: 2px;
+opacity: 0.7;"></center>
+<br>
+    <div class="row gx-5 mb-n10 z-1">
+      {% for i in pcourse %}
+        <div class="col-lg-4 mb-5">
+            <div class="card" style="width: 18rem; border:0px; box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);">
+                <img src="{{i.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  </svg> &nbsp; </i>Fully Notes Provided</li>
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg> &nbsp; Individual Attention </li>
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16">
+                    <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+                  </svg> &nbsp; Multiple Revisions</li>
+                </ul>
+                <div class="card-body">
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=9628809111&text=Hello Sir, I want to take the {{i.name}} in Glory IAS. Please send more details about the Course." class="btn" style="font-size: 14px;
+                  background: #ecf1ff;
+                  color: #4747fe;
+                  border: #e4e4eb;
+                  box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Get your Course Booked Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+    </div>
+</div> {% endcomment %}
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+ 
+@media only screen and (max-width: 768px) {
+  .coderchronicles  {
+    font-size: 50px!important;
+  
+  }
+
+  .lead{
+    font-size: 16px!important;
+  }
+  
+
+}
+  
+
+.servicecard
+{
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  border: 0px;
+}
+
+.coderchronicles  {
+  font-size: 75px;
+  font-weight: 1000;
+  color: #fff!important;
+  text-transform: uppercase;
+  font-family:'Mokoto';
+}
+
+.pro:hover{
+          background: #ffffff!important;
+          color: #000000!important;
+          border: 1px solid #000000!important;
+          box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%)!important;
+}
+
+.grid-wrapper{
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Montserrat', sans-serif;
+
+}
+.grid-wrapper li{
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 24px;
+  list-style-type: none;
+  padding: 3rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.main-container{
+  margin: 0 auto;
+  max-width: 1170px;
+  padding:2rem 1rem;
+}

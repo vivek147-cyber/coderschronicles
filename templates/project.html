@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block desc %} 
+{{ block.super }}
+<meta name="description" content="We believe that hard work commitment and a proper guidance can help a student in achieving their dreams"/>
+{% endblock %}
+{% block title %}Our Projects{% endblock title %}
+
+{% block css %}
+{{ block.super }}
+<link href="{% static 'css/project.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Dark color hero</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Our Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Need our service ?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="container px-4 py-5" id="custom-cards">
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      {% for i in project %}
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('{{i.image.url}}');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{i.name}}</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            {% comment %} <li class="me-auto">
+              <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+              <small>Earth</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+              <small>3d</small>
+            </li> {% endcomment %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+{% comment %} Popular course {% endcomment %}
+{% comment %} 
+<div class="container px-5">
+  <center><h2 class="wcu">Popular Course</h2>
+    <hr style="width:11%;background: black;
+height: 2px;
+opacity: 0.7;"></center>
+<br>
+    <div class="row gx-5 mb-n10 z-1">
+      {% for i in pcourse %}
+        <div class="col-lg-4 mb-5">
+            <div class="card" style="width: 18rem; border:0px; box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);">
+                <img src="{{i.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  </svg> &nbsp; </i>Fully Notes Provided</li>
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg> &nbsp; Individual Attention </li>
+                  <li class="list-group-item"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-repeat" viewBox="0 0 16 16">
+                    <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+                  </svg> &nbsp; Multiple Revisions</li>
+                </ul>
+                <div class="card-body">
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=9628809111&text=Hello Sir, I want to take the {{i.name}} in Glory IAS. Please send more details about the Course." class="btn" style="font-size: 14px;
+                  background: #ecf1ff;
+                  color: #4747fe;
+                  border: #e4e4eb;
+                  box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Get your Course Booked Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+    </div>
+</div> {% endcomment %}
+
+{% endblock content %}
