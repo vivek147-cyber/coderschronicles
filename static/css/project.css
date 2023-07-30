@@ -1,0 +1,11 @@
+  
+@font-face {
+    font-family: 'Mokoto'; 
+    src: url('../fonts/mokoto.regular.ttf'); 
+  }
+
+.proheading
+{
+    font-family:'Mokoto';
+    letter-spacing: 3px;
+}

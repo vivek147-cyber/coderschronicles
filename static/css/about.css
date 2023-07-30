@@ -1,4 +1,14 @@
+  
+@font-face {
+   font-family: 'Mokoto'; 
+   src: url('../fonts/mokoto.regular.ttf'); 
+ }
 
+.proheading
+{
+   font-family:'Mokoto';
+   letter-spacing: 3px;
+}
 h1 {
     text-align: center;
     font-weight: 300;
@@ -86,6 +96,13 @@ h1 {
     line-height: 1.5em;
     word-spacing: 1px;
     color: #888;
+ }
+
+ @media screen and  (max-width: 436px)
+ {
+.team{
+    padding-left: 63px!important;
+}
  }
  
  

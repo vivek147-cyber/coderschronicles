@@ -24,7 +24,7 @@
       .heading
       {
         text-transform:uppercase; color:#222; letter-spacing:1px;
-        font-family:'Poppins'; font-weight:380;
+        font-family:'Mokoto'; font-weight:380;
     }
 
     *{
@@ -114,6 +114,18 @@
     
   }
 
+  @font-face {
+    font-family: 'Mokoto'; 
+    src: url('../fonts/mokoto.regular.ttf'); 
+  }
+
+  @media screen and (max-width: 500px)
+  {
+.fimg {
+    width:100%!important;
+}
+  }
+
     
     
 </style>
@@ -127,11 +139,11 @@
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
         <div class="navbar-collapse collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav ms-auto me-lg-5">
-                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects">Our Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="courses">Corporate Training</a></li>
-                <li class="nav-item"><a class="nav-link" href="aboutus">About us</a></li>
-                <li class="nav-item"><a class="nav-link" href="/#contact">Conatct us</a></li>
+                <li class="nav-item "><a class="nav-link heading" href="/">Home</a></li>
+                <li class="nav-item "><a class="nav-link heading" href="projects">Our Projects</a></li>
+                <li class="nav-item "><a class="nav-link heading" href="courses">Corporate Training</a></li>
+                <li class="nav-item "><a class="nav-link heading" href="aboutus">About us</a></li>
+                <li class="nav-item "><a class="nav-link heading" href="/#contact">Conatct us</a></li>
 
             </ul>
         </div>
@@ -152,7 +164,7 @@
                 <!-- Widget 1 START -->
                 <div class="col-lg-3">
                     <!-- logo -->
-                    <a class="me-0"href="/" style="text-decoration:none; color: #ffffff;" >
+                    <a class="me-0 "href="/" style="text-decoration:none; color: #ffffff;" >
                         <h2>CODERS CHRONICLES</h2>
                     </a>
                     <p class="my-3" style="color: #ffffff;">Unlock Your Potential - Building Futures, One at a time: Software Development and Corporate Training for your Advancement in Career</p>
@@ -183,7 +195,7 @@
                 <div class="col-lg-6">
                     <div class="row g-4">
                         <!-- Link block -->
-                        <iframe class="servicecard" src="" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <img src="{% static "images/footer.png" %}" class="d-block mx-lg-auto img-fluid fimg" alt="Bootstrap Themes" loading="lazy" style="width:55%;" >
                         
                         <!-- Link block -->
                        
@@ -232,7 +244,8 @@
             </div>
         </div>
     </footer>
-   
+  
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
     <script>

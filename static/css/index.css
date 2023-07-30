@@ -19,12 +19,18 @@
   border: 0px;
 }
 
+@font-face {
+  font-family: 'Mokoto'; /*a name to be used later*/
+  src: url('../fonts/mokoto.regular.ttf'); /*URL to font*/
+}
+
 .coderchronicles  {
   font-size: 75px;
   font-weight: 1000;
   color: #fff!important;
   text-transform: uppercase;
   font-family:'Mokoto';
+  letter-spacing: 2px;
 }
 
 .pro:hover{
