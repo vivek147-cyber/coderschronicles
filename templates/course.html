@@ -13,22 +13,28 @@
 
 {% block content %}
 <center>
-  <section class=" position-relative d-flex align-items-center min-vh-100 overflow-hidden" >
-    <div class="px-4 py-5 my-5 text-center">
-      <h1 class="coderchronicles display-5 fw-bold text-body-emphasis">Corporate Training</h1>
+  <section class="bg-dark dark-mode position-relative d-flex align-items-center min-vh-100 overflow-hidden"  style="background-image: url('{% static "images/corporate.jpg" %}');background-position: center;
+  background-blend-mode: soft-light;">
+  <div class="px-4 py-5 my-5 text-center">
+      <h1 class="display-5 coderchronicles fw-bold " style="color: #ffffff;">CORPORATE TRAINING</h1>
       <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4" style="color:white; font-size:26px;">Unlock Your Potential - Building Futures, One at a time: Software Development and Corporate Training for your Advancement in Career</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <div class="card formcard bg-transparent" style="margin:47px; border:0px; " >
-            <img src="{% static 'images/course.png' %}" alt="course">
-        </div>
+          <a href="#stat" type="button" class="btn btn-lg px-4 gap-3 rounded-pill" style="color: #ffffff;
+          border: 3px solid #ffffff;
+          box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);" >Course Stats<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          <a href="#trainingcourse" type="button" class="btn  btn-lg px-4 rounded-pill" style="background: white;
+          color: #000000;
+          box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Our Courses<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
         </div>
       </div>
     </div> 
   </section>
   </center> 
-
+ <br>
+ <br>
 <section class="py-0 py-xl-5">
-	<div class="container">
+	<div class="container" id="stat">
 		<div class="row g-4">
 			<!-- Counter item -->
 			<div class="col-sm-6 col-xl-3">
@@ -57,7 +63,7 @@
 							<h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="200" data-purecounter-delay="200" data-purecounter-duration="0">200</h5>
 							<span class="mb-0 h5">+</span>
 						</div>
-						<p class="mb-0">Expert Tutors</p>
+						<p class="mb-0">Expert Teachers</p>
 					</div>
 				</div>
 			</div>
@@ -100,20 +106,20 @@
 
 <br>
 <br>
-<div class="container px-5">
+<div class="container px-5" id="trainingcourse">
   <center>
-    <h2 class="heading" style="color:#ffffff;">TRAINING COURSES</h2>
+    <h2 class="heading" style="font-family:'Mokoto';color:#ffffff;">TRAINING COURSES</h2>
 </center>
 <br>
     <div class="row gx-5 mb-n10 z-1">
       {% for i in tcourse %}
         <div class="col-lg-4 mb-5">
-            <div class="card" style="width: 18rem; border:0px; box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);">
+            <div class="card" style=" border:0px; box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);">
                 <img src="{{i.image.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">{{i.name}}</h5>
+                  <h3 class="card-title fw-bold ">{{i.name}}</h3>
                 </div>
-                
+               
                 <div class="card-body">
                   <p>{{i.description}}</p>
                   <a target="_blank" href="https://api.whatsapp.com/send?phone=7065522354&text=Hello Sir, I want to take this {{i.name}} course. Please send more details about the Course." class="btn"
@@ -121,7 +127,7 @@
                    background: #090909;
                    color: #ffffff;
                    border: #000000;
-                   box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Get your Course Booked Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                   box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Get your Courses<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                   </a>
                 </div>
               </div>
