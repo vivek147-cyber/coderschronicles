@@ -12,11 +12,13 @@
 {% endblock %}
 
 {% block content %}
-    <div class="bg-dark text-secondary px-4 py-5 text-center">
+<section class="bg-dark dark-mode position-relative d-flex align-items-center min-vh-100 overflow-hidden"  style="background-image: url('{% static "images/project.jpg" %}');background-position: bottom;
+background-blend-mode: difference;">
+    <div class="text-secondary px-4 py-5 text-center">
       <div class="py-5">
         <h1 class="display-5 fw-bold proheading text-white">Our Projects</h1>
         <div class="col-lg-6 mx-auto">
-          <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <p class="fs-5 mb-4" style="color:white;">Delve into the captivating world of our projects, where innovation meets creativity, and passion drives every endeavor to shape a better tomorrow. Explore Our Diverse Portfolio of Innovative and Impactful Projects That Showcase Our Dedication to Excellence and Creativity.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <a href="#custom-cards" type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold ">Our Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             <a target="_blank" href="https://api.whatsapp.com/send?phone=7065522354&text=Hey there, I need your service. Please reply." type="button" class="btn btn-outline-light btn-lg px-4">Need our service ?</a>
@@ -24,6 +26,7 @@
         </div>
       </div>
     </div>
+  </section>
 
 
 <div class="container px-4 py-5" id="custom-cards">

@@ -6,7 +6,11 @@ from django.contrib import messages
 # Create your views here.
 
 def index(request):
-   if request.method == 'POST' and 'contactforquery' in request.POST:
+  
+  return render(request,'index.html')
+
+def contact(request):
+ if request.method == 'POST' and 'contactforquery' in request.POST:
         name=request.POST.get('name')
         email=request.POST.get('email')
         contactNumber=request.POST.get('phonenumber')
@@ -23,10 +27,9 @@ def index(request):
 
         contact.save()
         messages.success(request, 'Form is successfully submitted.You will be contact soon.Thankyou :)')
-        return HttpResponseRedirect('/#contact') 
-   return render(request,'index.html')
+        return HttpResponseRedirect('/contact') 
 
-
+ return render(request,'contact.html')
 
 def course(request):
 

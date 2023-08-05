@@ -217,11 +217,11 @@
         <h1 class="display-5 fw-bold text-body-emphasis  lh-1 mb-3"  style="font-family:Mokoto;">Our Projects</h1>
         <p class="lead">Welcome to our world of innovation and creativity! Prepare to be amazed as we take you on a journey through our extraordinary projects and portfolio. We've gathered a collection of top-notch creations that will leave you in awe. No matter if you're a tech lover or just someone who appreciates beauty, our projects have something special for you.  </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <button type="button" class="btn pro btn-primary btn-lg px-4 gap-3"  style="
+          <a href="/projects" type="button" class="btn pro btn-primary btn-lg px-4 gap-3"  style="
           background: #090909;
           color: #ffffff;
           border: #000000;
-          box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Wanna see our Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+          box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Wanna see our Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
         </div>
       </div>
     </div>
@@ -234,67 +234,17 @@
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold "  style="font-family:Mokoto;">Corporate Training</h1>
         <p class="col-md-8" style="font-size:18px;">Stay ahead of the competition and invest in the future success of your company by enrolling in our transformative corporate training courses, where industry experts and thought leaders share invaluable insights and strategies to propel your business to new heights.</p>
-        <button class="btn btn-primary btn-lg pro" type="button"  style="
+        <a href="/courses" class="btn btn-primary btn-lg pro" type="button"  style="
         background: #090909;
         width: max-content;
         color: #ffffff;
         border: #000000;
-        box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Corporate Training <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        box-shadow: 0px 6px 10px 0px rgb(0 0 0 / 7%);">Corporate Training <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right ms-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
       </div>
     </div>
   </div>
 
 <br>
-
-    <div class="page-header-ui-content" id="contact">
-        <div class="container px-5" style="max-width: 822px;">
-           <div class="card formcard rounded-3 text-dark" style="border:0px">
-                        <div class="card-body">
-                            <center>
-                                <h2  style="font-family:Mokoto;">CONTACT US</h2>
-                            </center>
-                            <br>
-                           {% if messages %}
-                            {% for msg in messages %}
-                               <div class="alert alert-success alert-dismissible fade show" role="alert">
-                               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button>
-                               {{msg.message}}
-                               </div>
-                            {% endfor %}
-                         {% endif %}
-                            <form method="POST">
-                                {% csrf_token %}
-                                <div class="mb-3">
-
-                                    <input class="form-control" id="name" type="text" placeholder="Name" name="name"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-
-                                    <input class="form-control" id="leadCapEmail" type="email" placeholder="Email" name="email"
-                                        required>
-                                </div>
-                                <div class="mb-3">
-
-                                    <input class="form-control" id="phonenumber" type="number" max="9999999999" min="1000000000"
-                                        placeholder="Contact Number" name="phonenumber" required>
-                                </div>
-                                <div class="mb-3">
-
-                                    <textarea class="form-control" id="message" type="text"
-                                        placeholder="Comment your message" name="message" required></textarea>
-                                </div>
-
-                                <div class="d-grid"><button class="btn fw-500" style="color: #ffffff;
-                                  background: black;
-                                  box-shadow: 0px 6px 10px 0px rgb(255 255 255 / 11%);" name="contactforquery" type="submit">submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>    
+   
 
 {% endblock content %}
