@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
-from .models import contactform,training_course,projects
+from .models import contactform,training_course,projects,team
 from django.contrib import messages
 
 # Create your views here.
@@ -40,9 +40,9 @@ def course(request):
 
 def about(request):
 
-#  teachers=teacher.objects.all();
+ t=team.objects.all();
 
- return render(request,'about.html')
+ return render(request,'about.html',{'t':t })
 
 def project(request):
 
